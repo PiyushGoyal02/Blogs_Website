@@ -1,8 +1,28 @@
 import "../CSS_Code/LoginCSS.css";
 import NavbarLoginLogout from "../Navbar/NavbarLoginLogout";
 import LoginImage from "../Assests/Login_Image.png";
+import React, { useState } from "react";
 
 function Login() {
+
+    const [formData, setformData] = useState({
+        email: "",
+        password: ""
+    });
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setformData((prevData) => ({
+            ...prevData,
+            [name]: value
+        }));
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Handle login logic here
+        console.log("Form submitted:", formData);
+    };
+
     return (
         <div>
             <NavbarLoginLogout />
@@ -19,7 +39,7 @@ function Login() {
                     <div className="right-side-content">
                         <p>Login into your account</p>
                         <p>Enter your details to login your account</p>
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div className="form-group">
                                 <label htmlFor="email">Email:</label>
                                 <input
@@ -27,7 +47,9 @@ function Login() {
                                     type="email"
                                     id="email"
                                     name="email"
+                                    value={formData.email}
                                     className="InputTag"
+                                    onChange={handleInputChange}
                                     placeholder="Enter your email"
                                 />
                             </div>
@@ -38,7 +60,9 @@ function Login() {
                                     type="password"
                                     id="password"
                                     name="password"
+                                    value={formData.password}
                                     className="InputTag"
+                                    onChange={handleInputChange}
                                     placeholder="Enter your password"
                                 />
                             </div>
