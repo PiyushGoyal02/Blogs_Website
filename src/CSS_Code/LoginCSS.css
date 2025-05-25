@@ -1,0 +1,159 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b1120;
+    color: #f1f5f9;
+}
+
+/* Main Layout */
+.login-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 5%;
+    flex-wrap: wrap;
+}
+
+/* Left Image */
+.left-side-content {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Right Login Box */
+/* Right Login Box - Enlarged and Enhanced */
+.right-side-content {
+    width: 550px;
+    max-width: 480px; /* Increased from 400px */
+    background-color: #1e293b;
+    padding: 3rem 2.5rem; /* More internal padding */
+    border-radius: 20px; /* Slightly larger border radius */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.65); /* Deeper shadow */
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+
+.right-side-content p:first-of-type {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #f8fafc;
+    text-align: center;
+}
+
+.right-side-content p:nth-of-type(2) {
+    font-size: 0.95rem;
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+}
+
+/* Form styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    margin-bottom: 0.3rem;
+}
+
+.InputTag {
+    padding: 0.75rem 1rem;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    background-color: #0f172a;
+    color: #f1f5f9;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.InputTag:focus {
+    border-color: #3b82f6;
+    outline: none;
+}
+
+/* Login Button */
+.login-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3b82f6;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #2563eb;
+}
+
+/* Sign-up text */
+.right-side-content a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.right-side-content a:hover {
+    text-decoration: underline;
+}
+
+.register-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Donthavetext {
+  color: grey;
+  font-size: 6px; /* Changed from 5px to something more readable */
+  font-family: Arial, sans-serif;
+}
+
+.spanTextLoginSection {
+  margin-left: 4px; /* Add spacing between text and "Signin" */
+  font-weight: bold;
+  color: grey;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.spanTextLoginSection:hover {
+  cursor: pointer;
+  color: #3b82f6;
+  border-bottom: 1px solid #3b82f6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .left-side-content {
+        width: 100%;
+    }
+
+    .right-side-content {
+        width: 100%;
+    }
+}

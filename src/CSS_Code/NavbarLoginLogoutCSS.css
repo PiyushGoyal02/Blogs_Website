@@ -1,0 +1,114 @@
+/* Navbar Main Container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1d2632;
+  color: white;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Side - Brand Name */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left p {
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+/* Right Side */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #0e1a2b;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.search-input {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  outline: none;
+  font-size: 14px;
+  width: 180px;
+}
+
+.search-input::placeholder {
+  color: #a0a0a0;
+}
+
+.search-button {
+  background-color: #ffffff;
+  color: #1d2632;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* All Buttons (Theme, Login, Logout) */
+.navbar-right button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.navbar-right button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 16px;
+  }
+
+  .navbar-left,
+  .navbar-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .navbar-right {
+    margin-top: 12px;
+  }
+}
