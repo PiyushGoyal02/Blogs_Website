@@ -22,8 +22,9 @@ app.use(cookieParser());
 const database = require("./Config/DataBaseConnect");
 database.DBConnect();
 
-const authRoutes = require("./Routes/AuthRoute"); // Adjust path if needed
-app.use("/api/auth", authRoutes);
+const authRoutes = require("./Routes/AuthRoute");
+app.use("/api/v1/authSignup", authRoutes);
+app.use("/api/v1/authLogin", authRoutes);
 
 app.get('/', (req, res) => {
    res.send('Hello from the backend!');

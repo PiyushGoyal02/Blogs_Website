@@ -86,14 +86,6 @@ exports.authLogin = async (req, res) => {
       });
     }
 
-    // Check if the account type is user
-    if (user.accountType !== "user") {
-      return res.status(403).json({
-        success: false,
-        message: "Access denied. This is not a user account.",
-      });
-    }
-
     // Compare password from fom data and backend password
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {

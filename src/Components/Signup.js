@@ -3,9 +3,11 @@ import NavbarLoginLogout from "../Navbar/NavbarLoginLogout";
 import CreateAcc from "../Assests/CreateAcc_Image.png";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { Toaster, toast } from 'react-hot-toast';
 
 function Signup() {
-  const Navigator = useNavigate();
+  const Navigate = useNavigate(); // ✅ Renamed from Navigator
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,13 +23,42 @@ function Signup() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+
+    try {
+      const signupresponse = await axios.post(
+        `http://localhost:4000/api/v1/authSignup/signup`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (signupresponse.data.success) {
+        toast('Signup Successfuly 🎉', {
+          icon: '👏',
+          style: {
+            borderRadius: '10px',
+            background: '#333',
+            color: '#fff',
+          },
+        });
+        setTimeout(() => {
+          Navigate("/homepage");
+        }, 2000);
+      }
+    } catch (error) {
+      toast.error(error.response?.data?.message || "Signup failed");
+      console.error("Signup error:", error);
+    }
   };
 
   return (
     <div>
+      <Toaster position="bottom-right" reverseOrder={false} />
       <NavbarLoginLogout />
       <div className="login-container">
         {/* Left Side Content */}
@@ -39,8 +70,8 @@ function Signup() {
 
         {/* Right Side Content */}
         <div className="right-side-content">
-          <p>Login into your account</p>
-          <p>Enter your details to login your account</p>
+          <p>Create your account</p>
+          <p>Enter your details to sign up</p>
 
           <form onSubmit={handleSubmit}>
             <div className="form-group">
@@ -61,7 +92,7 @@ function Signup() {
               <label htmlFor="dob">Date of Birth:</label>
               <input
                 required
-                type="text"
+                type="date"
                 id="dob"
                 name="dob"
                 value={formData.dob}
@@ -108,7 +139,7 @@ function Signup() {
             <p className="Donthavetext">
               Already have an account?
               <span
-                onClick={() => Navigator("/")}
+                onClick={() => Navigate("/")}
                 className="spanTextLoginSection"
               >
                 {" "}

@@ -2,7 +2,7 @@ import "../CSS_Code/NavbarLoginLogoutCSS.css"
 import { IoSearch } from "react-icons/io5";
 import { IoIosSunny } from "react-icons/io";
 
-function NavbarLoginLogout() {
+function NavbarHomepage() {
     return (
         <div>
 
@@ -32,4 +32,4 @@ function NavbarLoginLogout() {
     );
 }
 
-export default NavbarLoginLogout;
+export default NavbarHomepage;
