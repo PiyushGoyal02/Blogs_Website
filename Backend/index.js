@@ -3,6 +3,7 @@ const cors = require('cors')
 const express = require("express")
 const cookieParser = require("cookie-parser");
 
+
 const app = express();
 const PORT = process.env.PORT || 4000
 
@@ -20,6 +21,9 @@ app.use(cookieParser());
 // Connect to Database
 const database = require("./Config/DataBaseConnect");
 database.DBConnect();
+
+const authRoutes = require("./Routes/AuthRoute"); // Adjust path if needed
+app.use("/api/auth", authRoutes);
 
 app.get('/', (req, res) => {
    res.send('Hello from the backend!');

@@ -2,8 +2,11 @@ import "../CSS_Code/LoginCSS.css";
 import NavbarLoginLogout from "../Navbar/NavbarLoginLogout";
 import LoginImage from "../Assests/Login_Image.png";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+
+    const Navigate = useNavigate();
 
     const [formData, setformData] = useState({
         email: "",
@@ -73,7 +76,7 @@ function Login() {
                         <div className="register-link">
                             <p className="Donthavetext">
                                 Don't have an account?
-                                <span className="spanTextLoginSection"> Signin</span>
+                                <span onClick={() => Navigate('/signup')} className="spanTextLoginSection"> Signin</span>
                             </p>
                         </div>
 
