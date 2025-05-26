@@ -1,4 +1,4 @@
-import "../CSS_Code/NavbarLoginLogoutCSS.css"
+import "../CSS_Code/NavbarHomepageCSS.css"
 import { IoSearch } from "react-icons/io5";
 import { IoIosSunny } from "react-icons/io";
 

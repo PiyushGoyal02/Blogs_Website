@@ -16,14 +16,14 @@
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 25px;
   flex-shrink: 1;
 }
 
 .navbar-left p {
   font-size: 22px;
   font-weight: bold;
-    margin-left: 25px;
+  margin-left: 25px;
 }
 
 /* Right Section */

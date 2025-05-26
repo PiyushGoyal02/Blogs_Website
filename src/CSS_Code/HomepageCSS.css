@@ -1,0 +1,242 @@
+.WebsiteImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.HomepageText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.WebsiteTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+    border-bottom: 4px solid palevioletred;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Layout wrapper for blog + sidebar */
+.ContentWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    color: white;
+    background-color: #1f2936;
+}
+
+/* Left side blogs */
+.LeftSideBlogContent {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.BlogCard {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: #2c2f35;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.BlogImage {
+    width:280px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.HTwo-TagBlogText {
+    margin-bottom: 0.5rem;       
+    color: #e0e0e0;              
+    font-size: 1.25rem;         
+    font-weight: 600;    
+}
+
+.BlogDescriptionText {
+    color: #888;
+    font-size: 1rem;
+    line-height: 1.5;            
+}
+
+/* Read More button */
+.ReadMoreButton {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    margin-top: 35px;
+}
+
+.ReadMoreButton:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* Right Sidebar */
+.RightSidebar {
+    flex: 1;
+    margin-left: 40px;
+    padding: 25px;
+    background-color: #374151; /* dark background */
+    border-radius: 12px;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.PopularCategories {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.Categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.CategoryTag {
+    background-color: #fff;
+    color: #000;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.CategoryTag:hover {
+    background-color: #ddd;
+}
+
+.Newsletter {
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.Newsletter h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+
+.Newsletter p {
+    font-size: 0.95rem;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+.Newsletter input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #1e2a38;
+    color: white;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.Newsletter input::placeholder {
+    color: #ccc;
+}
+
+.Newsletter button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Newsletter button:hover {
+    background-color: #ddd;
+}
+
+.SuggestedBlogs h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.SuggestedBlogs ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.SuggestedBlogs li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.SuggestedBlogs li:hover {
+    color: #fff;
+}
+
+
+/* Popular Author */
+.PopularAuthorsWrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.PopularAuthorsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 50px 0;
+    background-color: #0f1c2e; /* matches the dark theme */
+}
+
+/* Individual author card */
+.PopularAuthorCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Author image */
+.AuthorImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Author name */
+.AuthorName {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}
