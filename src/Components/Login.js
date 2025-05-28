@@ -3,7 +3,7 @@ import NavbarLoginLogout from "../Navbar/NavbarLoginLogout";
 import LoginImage from "../Assests/Login_Image.png";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Toaster, toast } from 'react-hot-toast';
+import toast from "react-hot-toast";
 import axios from "axios";
 
 function Login() {
@@ -37,7 +37,7 @@ function Login() {
       );
 
       console.log("Login success:", loginResponse.data);
-      toast.success("Login successful!")
+      toast.success("Login successful!");
       Navigate("/homepage");
 
     } catch (error) {
@@ -48,7 +48,6 @@ function Login() {
 
   return (
     <div>
-      <Toaster position="bottom-right" reverseOrder={false} />
       <NavbarLoginLogout />
       <div className="login-container">
         {/* Left Side Content */}

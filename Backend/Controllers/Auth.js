@@ -36,10 +36,10 @@ exports.authSignup = async (req, res) => {
       password: hashedPassword,
     });
 
-
     const payload = {
       id: newUser._id,
       email: newUser.email,
+      accountType: newUser.accountType,
     };
 
     const token = JWT.sign(payload, process.env.JWT_SECRET, {
