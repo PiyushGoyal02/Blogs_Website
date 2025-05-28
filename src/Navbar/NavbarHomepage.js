@@ -1,8 +1,10 @@
 import "../CSS_Code/NavbarHomepageCSS.css"
 import { IoSearch } from "react-icons/io5";
 import { IoIosSunny } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 function NavbarHomepage() {
+    const Navigator = useNavigate();
     return (
         <div>
 
@@ -20,9 +22,9 @@ function NavbarHomepage() {
 
                 {/* Second Right Side */}
                 <div className="navbar-right">
-                    <p>Home</p>
+                    <p onClick={() => Navigator('/homepage')}>Home</p>
                     <p>Blogs</p>
-                    <p>About</p>
+                    <p onClick={() => Navigator('/about')}>About</p>
                     <button><IoIosSunny/></button>
                     <button>Login</button>
                     <button>Logout</button>
