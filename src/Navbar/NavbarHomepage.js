@@ -11,7 +11,7 @@ function NavbarHomepage() {
             <div className="navbar-container">
                 {/* First Left Side */}
                 <div className="navbar-left">
-                    <p>WRITELY</p>
+                    <p onClick={() => Navigator('/homepage')}>WRITELY</p>
                     <div className="search-container">
                         <input type="text" className="search-input" placeholder="Search" />
                         <button className="search-button">
@@ -23,7 +23,7 @@ function NavbarHomepage() {
                 {/* Second Right Side */}
                 <div className="navbar-right">
                     <p onClick={() => Navigator('/homepage')}>Home</p>
-                    <p>Blogs</p>
+                    <p onClick={() => Navigator('/allblogs')}>Blogs</p>
                     <p onClick={() => Navigator('/about')}>About</p>
                     <button><IoIosSunny/></button>
                     <button>Login</button>

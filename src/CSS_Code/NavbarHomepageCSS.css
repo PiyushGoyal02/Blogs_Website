@@ -18,6 +18,7 @@
   align-items: center;
   gap: 25px;
   flex-shrink: 1;
+  cursor: pointer;
 }
 
 .navbar-left p {
