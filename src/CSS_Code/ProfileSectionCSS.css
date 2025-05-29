@@ -1,0 +1,42 @@
+.SidebarContainer {
+    width: 230px;
+    height: 100vh;
+    background-color: #0f172a;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 100px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.SidebarTags {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 12px;
+}
+
+.SidebarItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.SidebarItem:hover {
+    background-color: #1e293b;
+}
+
+.SidebarItem.active {
+    background-color: #1e40af;
+    font-weight: 600;
+}
+
+.SidebarIcon {
+    font-size: 18px;
+}

@@ -6,6 +6,7 @@ import Signup from './Components/Signup';
 import Homepage from './Components/Homepage';
 import About from './Components/About';
 import AllBlogs from "./Components/AllBlogs"
+import ProfileSection from './Components/ProfileSection';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path='/signup' element={<Signup/>}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='/allblogs' element={<AllBlogs/>}></Route>
+        <Route path='/profilesection' element={<ProfileSection/>}></Route>
         <Route path='/homepage' element={<Homepage/>}></Route>
       </Routes>
     </div>
