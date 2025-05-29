@@ -2,9 +2,19 @@ import "../CSS_Code/NavbarHomepageCSS.css"
 import { IoSearch } from "react-icons/io5";
 import { IoIosSunny } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import profileImage from "../Assests/real-girl-pic-8.jpg"
 
 function NavbarHomepage() {
     const Navigator = useNavigate();
+    const UserId = localStorage.getItem('UserIdAfterSignup') || localStorage.getItem('UserIdAfterLogin');
+    console.log(UserId, "UserId");
+
+    function LogoutButtonHandler() {
+        localStorage.removeItem('UserIdAfterSignup');
+        localStorage.removeItem('UserIdAfterLogin');
+        Navigator('/'); 
+    }
+
     return (
         <div>
 
@@ -26,8 +36,16 @@ function NavbarHomepage() {
                     <p onClick={() => Navigator('/allblogs')}>Blogs</p>
                     <p onClick={() => Navigator('/about')}>About</p>
                     <button><IoIosSunny/></button>
-                    <button>Login</button>
-                    <button>Logout</button>
+                    {UserId && (
+                        <div>
+                            <img
+                                src={profileImage}
+                                alt="Profile"
+                                className="ProfileImage"
+                            />
+                        </div>
+                    )}
+                    <button onClick={LogoutButtonHandler}>Logout</button>
                 </div>
             </div>
         </div>

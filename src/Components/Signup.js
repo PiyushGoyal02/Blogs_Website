@@ -7,7 +7,7 @@ import axios from "axios";
 import { Toaster, toast } from 'react-hot-toast';
 
 function Signup() {
-  const Navigate = useNavigate(); // ✅ Renamed from Navigator
+  const Navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -36,6 +36,10 @@ function Signup() {
           },
         }
       );
+
+      const UserIdAfterSignup = signupresponse.data.user._id
+      console.log(UserIdAfterSignup, "UserIdAfterSignup")
+      localStorage.setItem("UserIdAfterSignup", UserIdAfterSignup)
 
       if (signupresponse.data.success) {
         toast('Signup Successfuly 🎉', {

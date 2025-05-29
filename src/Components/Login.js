@@ -36,7 +36,9 @@ function Login() {
         }
       );
 
-      console.log("Login success:", loginResponse.data);
+     const UserIdAfterLogin = loginResponse.data.user._id;
+     localStorage.setItem("UserIdAfterLogin", UserIdAfterLogin);
+
       toast.success("Login successful!");
       Navigate("/homepage");
 
