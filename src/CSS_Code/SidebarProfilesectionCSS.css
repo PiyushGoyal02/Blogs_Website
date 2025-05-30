@@ -1,0 +1,84 @@
+/* Sidebar Container */
+.SidebarContainer {
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    height: 100vh;
+    background-color: #0f172a;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 100px; /* space below fixed navbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+/* Sidebar Items Wrapper */
+.SidebarTags {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 12px;
+}
+
+/* Each Item in Sidebar */
+.SidebarItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect */
+.SidebarItem:hover {
+    background-color: #1e293b;
+    transform: scale(1.02);
+}
+
+/* Active Tab Styling */
+.SidebarItem.active {
+    background-color: #1e40af;
+    font-weight: 600;
+}
+
+/* Icons in Sidebar */
+.SidebarIcon {
+    font-size: 18px;
+}
+
+/* Main Content Area */
+.AdminMainContent {
+    margin-left: 230px; /* leave space for fixed sidebar */
+    padding: 120px 30px 30px 30px; /* top padding to clear navbar */
+    background-color: #0f172a; /* light background, change as needed */
+    min-height: 100vh;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+/* Optional: Mobile responsiveness */
+@media (max-width: 768px) {
+    .SidebarContainer {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        padding-top: 80px;
+        position: relative;
+    }
+
+    .SidebarTags {
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .AdminMainContent {
+        margin-left: 0;
+        padding: 100px 20px 20px 20px;
+    }
+}

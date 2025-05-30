@@ -62,7 +62,7 @@ function NavbarHomepage() {
                 <div className="dropdown-menu">
                   <div
                     className="dropdown-item"
-                    onClick={() => navigate("/profilesection")}
+                    onClick={() => navigate("/Sidebarprofilesection")}
                   >
                     <FaUser /> <span>Profile</span>
                   </div>

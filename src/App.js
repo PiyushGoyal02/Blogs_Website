@@ -7,6 +7,9 @@ import Homepage from './Components/Homepage';
 import About from './Components/About';
 import AllBlogs from "./Components/AllBlogs"
 import ProfileSection from './Components/ProfileSection';
+import SidebarProfilesection from './Components/SidebarProfilesection';
+import YourBlogs from './Components/YourBlogs';
+import CreateBlog from "./Components/CreateBlog"
 
 
 function App() {
@@ -17,7 +20,10 @@ function App() {
         <Route path='/signup' element={<Signup/>}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='/allblogs' element={<AllBlogs/>}></Route>
+        <Route path='/Sidebarprofilesection' element={<SidebarProfilesection/>}></Route>
         <Route path='/profilesection' element={<ProfileSection/>}></Route>
+        <Route path='/yourblogs' element={<YourBlogs/>}></Route>
+        <Route path='/createblogs' element={<CreateBlog/>}></Route>
         <Route path='/homepage' element={<Homepage/>}></Route>
       </Routes>
     </div>
