@@ -1,0 +1,123 @@
+.YourBlogsContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 12px;
+    background-color: #1f2936;
+    color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin: 2rem;
+    gap: 1rem;
+}
+
+.TitleHeading-YourBlogs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #444;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.CategoryDateAction-Heading {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.BlogItemRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #273245;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: background 0.3s;
+}
+
+.BlogItemRow:hover {
+    background-color: #323f54;
+}
+
+.BlogInfoLeft {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 60%;
+}
+
+.YourBlogsImage {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
+}
+
+.BlogTitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+.BlogMetaRight {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+.BlogMetaRight svg {
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.3s;
+}
+
+.BlogMetaRight svg:hover {
+    color: #fff;
+}
+
+.ActionContainer {
+    position: relative;
+}
+
+.ActionEditSection {
+    position: absolute;
+    top: 24px;
+    right: 0;
+    background-color: #374151;
+    border: 1px solid #4b5563;
+    border-radius: 6px;
+    padding: 0.5rem 0;
+    z-index: 10;
+    width: 100px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.ActionEditSection p {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.ActionEditSection p:hover {
+    background-color: #4b5563;
+}
+
+.RecentBlogsDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.RecentBlogsTitle{
+    color: grey;
+
+}

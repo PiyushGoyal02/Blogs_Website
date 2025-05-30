@@ -6,30 +6,39 @@ import { useState } from "react";
 
 function ProfileSection() {
     const [popup, setPopup] = useState(false);
-    const [form, setform] = useState({
-        name:"",
-        lastname:"",
-        linkdin:"",
-        github:"",
-        facebook:"",
-        instagram:"",
-        description:"",
-        imgaeURL:""
-    })
+    const [form, setForm] = useState({
+        name: "",
+        lastname: "",
+        linkedin: "",
+        github: "",
+        facebook: "",
+        instagram: "",
+        description: "",
+        imageURL: ""
+    });
 
     function onChangeHandler(event) {
         const { name, value } = event.target;
-        setform((prevForm) => ({
+        setForm((prevForm) => ({
             ...prevForm,
             [name]: value,
         }));
     }
 
+    function onFileChangeHandler(event) {
+        const file = event.target.files[0];
+        if (file) {
+            setForm((prevForm) => ({
+                ...prevForm,
+                imageURL: URL.createObjectURL(file),
+            }));
+        }
+    }
 
     const submitFormDataHandler = async (e) => {
         e.preventDefault();
-        console.log(form, "FormData")
-    }
+        console.log(form, "FormData");
+    };
 
     const openPopup = () => setPopup(true);
     const closePopup = () => setPopup(false);
@@ -40,16 +49,24 @@ function ProfileSection() {
                 {/* Left Panel */}
                 <div className="leftsideContainer">
                     <img
-                        src={profileImage}
+                        src={form.imageURL || profileImage}
                         alt="Profile"
                         className="ProfileImage-ProfileSection"
                     />
                     <p className="role">Web Developer</p>
                     <div className="SocialMediaIcons">
-                        <FaFacebook />
-                        <FaLinkedin />
-                        <FaGithub />
-                        <FaInstagram />
+                        <a href={form.facebook} target="_blank" rel="noopener noreferrer">
+                            <FaFacebook />
+                        </a>
+                        <a href={form.linkedin} target="_blank" rel="noopener noreferrer">
+                            <FaLinkedin />
+                        </a>
+                        <a href={form.github} target="_blank" rel="noopener noreferrer">
+                            <FaGithub />
+                        </a>
+                        <a href={form.instagram} target="_blank" rel="noopener noreferrer">
+                            <FaInstagram />
+                        </a>
                     </div>
                 </div>
 
@@ -59,7 +76,7 @@ function ProfileSection() {
                     <p><strong>Email:</strong> rohitsingh@gmail.com</p>
                     <p className="about-label">About Me</p>
                     <div className="about-box">
-                        <p></p>
+                        <p>{form.description}</p>
                     </div>
                     <button onClick={openPopup} className="edit-btn">Edit Profile</button>
                 </div>
@@ -98,24 +115,24 @@ function ProfileSection() {
                                 </div>
                                 <div className="form-field">
                                     <label htmlFor="instagram">Instagram</label>
-                                    <input id="instagram" type="text" placeholder="Enter a URL" onChange={onChangeHandler} name="instagram" value={form.instagram}/>
+                                    <input id="instagram" type="text" placeholder="Enter a URL" onChange={onChangeHandler} name="instagram" value={form.instagram} />
                                 </div>
                             </div>
 
                             <div className="form-row">
                                 <div className="form-field">
                                     <label htmlFor="linkedin">LinkedIn</label>
-                                    <input id="linkedin" type="text" onChange={onChangeHandler} name="linkdin" value={form.linkdin}/>
+                                    <input id="linkedin" type="text" onChange={onChangeHandler} name="linkedin" value={form.linkedin} />
                                 </div>
                                 <div className="form-field">
                                     <label htmlFor="github">GitHub</label>
-                                    <input id="github" type="text" onChange={onChangeHandler} name="github" value={form.github}/>
+                                    <input id="github" type="text" onChange={onChangeHandler} name="github" value={form.github} />
                                 </div>
                             </div>
 
                             <div className="form-full">
                                 <label htmlFor="description">Description</label>
-                                <textarea id="description" rows="4" onChange={onChangeHandler} name="description" value={form.description}/>
+                                <textarea id="description" rows="4" onChange={onChangeHandler} name="description" value={form.description}></textarea>
                             </div>
 
                             <div className="form-full">
@@ -129,8 +146,7 @@ function ProfileSection() {
                                     title="File Explorer"
                                     style={{ display: "none" }}
                                     name="imageURL"
-                                    value={form.imgaURL}
-                                    onChange={onChangeHandler}
+                                    onChange={onFileChangeHandler}
                                 />
                             </div>
 

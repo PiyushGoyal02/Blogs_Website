@@ -41,6 +41,10 @@
     cursor: pointer;
 }
 
+.SocialMediaIcons a {
+    color: #cbd5e1;
+}
+
 .rightsideContainer {
     flex: 2;
     display: flex;
