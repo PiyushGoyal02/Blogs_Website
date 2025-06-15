@@ -1,0 +1,107 @@
+/* Wrapper to center the whole content */
+.createBlogWrapper {
+  
+  min-height: 100vh;
+  background-color: #0f172a;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Card-style container */
+.createBlogContainer {
+  background-color: #1e293b;
+  padding: 2rem;
+  border-radius: 12px;
+  /* width: 500px; */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Main heading */
+.createBlogHeading {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+/* Subtext / description */
+.createBlogSubtext {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+/* Form groups (label + input/select) */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.inputField,
+.selectDropdown {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: #334155;
+  color: #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.inputField:focus,
+.selectDropdown:focus {
+  background-color: #475569;
+}
+
+.selectDropdown option {
+  background-color: #334155;
+  color: #f1f5f9;
+}
+
+.selectDropdown {
+  width: 50%;
+}
+
+div textarea {
+  width: 100%;
+  height: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical; /* Allows vertical resizing only */
+  box-sizing: border-box;
+}
+
+/* Thumbnail Section */
+.uploadButton {
+  background-color: #3b82f6;
+  width: 220px;
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.uploadButton:hover {
+  background-color: #2563eb;
+}
+
+
+/* Thumbnail preview */
+.previewContainer {
+  margin-top: 1rem;
+}
+
+.thumbnail {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+}
